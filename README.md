@@ -1,2 +1,2 @@
 # my_projects
-a repository dedicated to my own projects
+for modular asset management internship application
