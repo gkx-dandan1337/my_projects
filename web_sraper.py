@@ -100,8 +100,9 @@ def check_and_insert_data(cursor, new_first_row, all_new_data, current_timestamp
         print(row)
         cursor.execute("""
             INSERT INTO mktdata (Security, Trades, TTA, Open, High, Low, LTP, SIGNAL, T_G, LTY, Timestamp)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)
-        """, (tuple(*row[1:]), current_timestamp))  # Ensure all columns match the table schema
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, tuple(row[:10]) + (current_timestamp,))  # ✅ CORRECT
+
 
     print("Data inserted successfully.")
 
