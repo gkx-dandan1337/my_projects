@@ -11,3 +11,19 @@
 2025-03-11 01:01:34,222 - WARNING - No data scraped from the website.
 2025-03-11 01:01:38,273 - WARNING - No new data to insert.
 2025-03-11 09:13:46,668 - INFO - ====== WebDriver manager ======
+2025-03-11 12:47:01,075 - INFO - ====== WebDriver manager ======
+2025-03-11 12:47:03,083 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:47:03,197 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:47:03,247 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-11 12:47:42,125 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-11 12:47:42,125 - ERROR - Failed to establish database connection. Skipping data insert.
+2025-03-11 12:47:54,883 - INFO - ====== WebDriver manager ======
+2025-03-11 12:47:56,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:47:57,087 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:47:57,234 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-11 12:48:10,750 - INFO - ====== WebDriver manager ======
+2025-03-11 12:48:12,645 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:48:12,804 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-11 12:48:12,924 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-11 12:48:48,485 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258]. ')
+2025-03-11 12:48:48,485 - ERROR - Failed to establish database connection. Skipping data insert.
