@@ -13,16 +13,27 @@ logging.basicConfig(filename="ccil_scraper.log", level=logging.INFO, format="%(a
 
 # Connect to Azure SQL
 def connect_to_db():
-    try:
-        logging.info("attempting to connect to the database...")
-        conn = pypyodbc.connect(
-            "Driver={ODBC Driver 18 for SQL Server};Server=tcp:modular-server.database.windows.net,1433;Database=modular;Uid=CloudSA1c5b822c;Pwd={Givemeinternship!};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
-        ) #connection string that was obtained from azure server.
-        logging.info('returning database object...')
-        return conn
-    except pypyodbc.Error as e:
-        logging.error(f"Database connection failed: {e}")
-        return None
+    start_time = time.time()  # Record the start time
+    retry_interval = 10  # Retry every 10 seconds
+    max_retry_duration = 5 * 60  # Retry for a max of 5 minutes (300 seconds)
+    while True:
+        try:
+            logging.info("Attempting to connect to the database...")
+            conn = pypyodbc.connect(
+                "Driver={ODBC Driver 18 for SQL Server};Server=tcp:modular-server.database.windows.net,1433;Database=modular;Uid=CloudSA1c5b822c;Pwd={Givemeinternship!};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+            )
+            logging.info("Returning database object...")
+            return conn  # If successful, return the connection object
+
+        except pypyodbc.Error as e:
+            logging.error(f"Database connection failed: {e}")
+            elapsed_time = time.time() - start_time  # Check the elapsed time
+            if elapsed_time >= max_retry_duration:
+                logging.error("Max retry duration reached. Exiting...")
+                return None  # After 5 minutes, stop trying and return None
+            else:
+                logging.info(f"Retrying... Elapsed time: {elapsed_time:.2f} seconds")
+                time.sleep(retry_interval)  # Wait for `retry_interval` seconds before retrying
 
 #scraping ccil market data
 #selenium was used using a headless browser so that it can run on the virtual machine. beautiful soup cannot be used as the data from the table is loaded dynamically based on javascript.
