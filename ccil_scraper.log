@@ -27,3 +27,84 @@
 2025-03-11 12:48:12,924 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
 2025-03-11 12:48:48,485 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258]. ')
 2025-03-11 12:48:48,485 - ERROR - Failed to establish database connection. Skipping data insert.
+2025-03-12 16:25:50,608 - INFO - ====== WebDriver manager ======
+2025-03-12 16:25:52,857 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:25:53,256 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:25:53,278 - INFO - There is no [win64] chromedriver "134.0.6998.88" for browser google-chrome "134.0.6998" in cache
+2025-03-12 16:25:53,278 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:25:53,349 - INFO - WebDriver version 134.0.6998.88 selected
+2025-03-12 16:25:53,359 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+2025-03-12 16:25:53,359 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip
+2025-03-12 16:25:53,379 - INFO - Driver downloading response is 200
+2025-03-12 16:25:54,179 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:25:54,346 - INFO - Driver has been saved in cache [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88]
+2025-03-12 16:26:16,359 - INFO - ====== WebDriver manager ======
+2025-03-12 16:26:18,249 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:26:18,316 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:26:18,360 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:27:43,576 - INFO - ====== WebDriver manager ======
+2025-03-12 16:27:45,437 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:27:45,471 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:27:45,499 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:28:55,052 - INFO - ====== WebDriver manager ======
+2025-03-12 16:28:57,017 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:28:57,049 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:28:57,082 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:29:33,763 - INFO - ====== WebDriver manager ======
+2025-03-12 16:29:35,695 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:29:35,738 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:29:35,773 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:30:21,519 - INFO - ====== WebDriver manager ======
+2025-03-12 16:30:23,397 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:30:23,428 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:30:23,459 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:47:33,689 - INFO - ====== WebDriver manager ======
+2025-03-12 16:47:35,791 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:47:35,845 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:47:36,021 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:51:26,773 - INFO - ====== WebDriver manager ======
+2025-03-12 16:51:28,701 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:51:28,740 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:51:28,775 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:52:06,256 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 16:52:06,256 - ERROR - Failed to establish database connection. Skipping data insert.
+2025-03-12 16:52:12,483 - INFO - ====== WebDriver manager ======
+2025-03-12 16:52:14,469 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:52:14,501 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:52:14,532 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:53:17,749 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 16:53:17,749 - ERROR - Failed to establish database connection. Skipping data insert.
+2025-03-12 16:54:22,421 - INFO - ====== WebDriver manager ======
+2025-03-12 16:54:24,508 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:54:24,722 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 16:54:24,876 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 16:54:45,041 - INFO - New data inserted into SQL database.
+2025-03-12 17:15:53,271 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258]. ')
+2025-03-12 17:31:23,442 - INFO - ====== WebDriver manager ======
+2025-03-12 17:31:25,805 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:31:25,972 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:31:26,109 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 17:42:49,644 - INFO - ====== WebDriver manager ======
+2025-03-12 17:42:51,998 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:42:52,137 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:42:52,246 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 17:43:10,011 - INFO - attempting to connect to the database...
+2025-03-12 17:43:10,524 - INFO - returning database object...
+2025-03-12 17:43:10,602 - ERROR - Error while inserting data: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near the keyword 'Open'.")
+2025-03-12 17:43:10,651 - INFO - Database connection closed.
+2025-03-12 17:43:46,121 - INFO - ====== WebDriver manager ======
+2025-03-12 17:43:48,045 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:43:48,168 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:43:48,330 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 17:44:05,472 - INFO - attempting to connect to the database...
+2025-03-12 17:44:05,836 - INFO - returning database object...
+2025-03-12 17:44:05,893 - ERROR - Error while inserting data: local variable 'rows_inserted' referenced before assignment
+2025-03-12 17:44:05,985 - INFO - Database connection closed.
+2025-03-12 17:44:32,902 - INFO - ====== WebDriver manager ======
+2025-03-12 17:44:34,867 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:44:35,025 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 17:44:35,198 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 17:44:53,366 - INFO - attempting to connect to the database...
+2025-03-12 17:44:53,778 - INFO - returning database object...
+2025-03-12 17:44:54,840 - INFO - Inserted 15 new rows into SQL database.
+2025-03-12 17:44:54,883 - INFO - Database connection closed.

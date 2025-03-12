@@ -14,18 +14,17 @@ logging.basicConfig(filename="ccil_scraper.log", level=logging.INFO, format="%(a
 # Connect to Azure SQL
 def connect_to_db():
     try:
-        print('attempting to connect to database..')
+        logging.info("attempting to connect to the database...")
         conn = pypyodbc.connect(
             "Driver={ODBC Driver 18 for SQL Server};Server=tcp:modular-server.database.windows.net,1433;Database=modular;Uid=CloudSA1c5b822c;Pwd={Givemeinternship!};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
         ) #connection string that was obtained from azure server.
-        print('returning database object...')
+        logging.info('returning database object...')
         return conn
     except pypyodbc.Error as e:
         logging.error(f"Database connection failed: {e}")
         return None
 
 #scraping ccil market data
-
 #selenium was used using a headless browser so that it can run on the virtual machine. beautiful soup cannot be used as the data from the table is loaded dynamically based on javascript.
 def scrape_ccil():
     options = Options()
@@ -61,51 +60,34 @@ def scrape_ccil():
     
     return df #return the dataframe extracted from the most recent page.
 
-#this function checks if the data that was scraped already exists in the database. it checks the first row of the scraped data, and compares it to the first row of the database. if the records match, it means that nothing has been updated after one hour, and nothing needs to be inserted into the database.
-def check_and_insert_data(cursor, new_first_row, all_new_data, current_timestamp):
-    """
-    Checks if the first row in the new table is different from the first row in the database.
-    If different, inserts all new data.
-    :param new_first_row: List containing the first row from the new table
-    :param all_new_data: List of all new rows (to be inserted if the first row is different)
-    :param current_timestamp: The timestamp for this batch of data
-    """
-
-    #extract security description from the first row
-    security = new_first_row[0] 
-
-    #retrieve the most recent first row from the database
+def row_exists(row, cursor):
+    security = row["Security"]
+    trades = row["Trades"]
+    tta = row["TTA"]
+    open = row["Open"]
+    high = row["High"]
+    low = row["Low"]
+    ltp = row["LTP"]
+    signal = row["Signal"]
+    tg = row["T/G"]
+    lty = row["LTY"]
     cursor.execute("""
-        SELECT TOP 1 * FROM mktdata
-        WHERE Security = ?
-        ORDER BY Timestamp DESC
-    """, (security,))
+    SELECT 1 FROM mktdata
+    WHERE Security = ?
+    AND Trades = ?
+    AND TTA = ?
+    AND [Open] = ?
+    AND High = ?
+    AND Low = ?
+    AND LTP = ?
+    AND SIGNAL = ?
+    AND T_G = ?
+    AND LTY = ?
+    AND CONVERT(DATE, Timestamp) >= DATEADD(DAY, -1, CONVERT(DATE, GETDATE()))
+    """, (security, trades, tta , open, high, low, ltp, signal, tg, lty))
     
-    existing_first_row = cursor.fetchone()
+    return cursor.fetchone() is not None #returns true if there are exact records found, otherwise returns false.
 
-    if existing_first_row:
-        existing_values = existing_first_row[1:]  #exclude id 
-        new_values = tuple(new_first_row)
-
-        # Compare first row data
-        if existing_values == new_values:
-            print("No change detected in first row. Skipping insertion.")
-            return
-
-    # If first row is different or no existing data, insert all new rows
-    print("Change detected! Inserting new data...")
-    
-    for row in all_new_data:
-        print("row about to be executed is:")
-        print(row)
-        print(len(row))
-        cursor.execute("""
-            INSERT INTO mktdata (Security, Trades, TTA, [Open], High, Low, LTP, SIGNAL, T_G, LTY, Timestamp)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, tuple(row))
-
-
-    print("Data inserted successfully.")
 
 # Insert new data into SQL
 # Function to insert data into SQL
@@ -121,25 +103,38 @@ def insert_data_into_db(df):
         logging.warning("No data to insert. DataFrame is empty.")
         conn.close()
         return
-    # Extract the first row from the DataFrame
-    new_first_row = df.iloc[0].tolist()  # Convert first row to a list
-    # Convert entire DataFrame to a list of lists for batch insertion
-    all_new_data = df.values.tolist()
-    # Extract timestamp (assuming it's the same for all rows)
-    current_timestamp = df.iloc[0]["Timestamp"]
-    # Check and insert data based on the first row comparison
-    check_and_insert_data(cursor, new_first_row, all_new_data, current_timestamp)
-    # Commit and close connection
-    conn.commit()
-    conn.close()
-    logging.info("New data inserted into SQL database.")
+    rows_inserted = 0
+    try:
+        for index, row in df.iterrows():
+            if row_exists(row, cursor):
+                logging.info(f"Row already exists in the database: {row.to_dict()}")
+                continue
+            else:
+                cursor.execute("""
+                    INSERT INTO mktdata (Security, Trades, TTA, [Open], High, Low, LTP, SIGNAL, T_G, LTY, Timestamp)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (row["Security"], row["Trades"], row["TTA"], row["Open"], row["High"],
+                      row["Low"], row["LTP"], row["Signal"], row["T/G"], row["LTY"], row["Timestamp"]))
+                rows_inserted += 1
 
+        if rows_inserted > 0:
+            conn.commit()
+            logging.info(f"Inserted {rows_inserted} new rows into SQL database.")
+
+    except Exception as e:
+        logging.error(f"Error while inserting data: {e}")
+        conn.rollback()
+
+    finally:
+        conn.close()
+        logging.info("Database connection closed.")
 
 # Main Execution
-if __name__ == "__main__":
+def main():
     df = scrape_ccil()
-    print(df)
     if df is not None:
         insert_data_into_db(df)
     else:
         logging.warning("No new data to insert.")
+
+main() #call the function to run 

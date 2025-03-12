@@ -1,0 +1,7 @@
+selenium
+pandas
+time
+pypyodbc
+logging
+
+
