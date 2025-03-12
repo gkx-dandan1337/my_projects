@@ -90,10 +90,10 @@ app.layout = html.Div([
             ), width=12)
         ]),
         dbc.Row([
-            dbc.Col(dcc.Graph(id='timeseries-chart-trades'), width=12)
+            dbc.Col(dcc.Loading(id="loading-graph-trades", type="circle", children=[dcc.Graph(id='timeseries-chart-trades')]), width=12)
         ]),
         dbc.Row([
-            dbc.Col(dcc.Graph(id='timeseries-chart-tta'), width=12)
+            dbc.Col(dcc.Loading(id="loading-graph-tta", type="circle", children=[dcc.Graph(id='timeseries-chart-tta')]), width=12)
         ])
     ])
 ])

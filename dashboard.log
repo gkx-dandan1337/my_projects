@@ -170,3 +170,209 @@ dash._grouping.SchemaTypeValidationError: Schema: [<Output `timeseries-chart-tra
 2025-03-12 23:39:20,634 - INFO - Attempting to connect to the database...
 2025-03-12 23:39:35,752 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
 2025-03-12 23:39:35,754 - INFO - Retrying... Elapsed time: 90.47 seconds
+2025-03-12 23:40:49,286 - INFO - Attempting to connect to the database...
+2025-03-12 23:41:04,442 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:41:04,442 - INFO - Retrying... Elapsed time: 15.16 seconds
+2025-03-12 23:41:14,447 - INFO - Attempting to connect to the database...
+2025-03-12 23:41:29,551 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:41:29,552 - INFO - Retrying... Elapsed time: 40.27 seconds
+2025-03-12 23:41:39,553 - INFO - Attempting to connect to the database...
+2025-03-12 23:41:39,724 - INFO - Returning database object...
+2025-03-12 23:41:39,745 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-03-12 23:41:39,827 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2025-03-12 23:41:39,827 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 23:41:57,927 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:57] "GET / HTTP/1.1" 200 -
+2025-03-12 23:41:58,193 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-03-12 23:41:58,195 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "GET /_dash-layout HTTP/1.1" 200 -
+2025-03-12 23:41:58,511 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-03-12 23:41:58,513 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-03-12 23:41:58,529 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-03-12 23:41:58,535 - INFO - Attempting to connect to the database...
+2025-03-12 23:41:58,577 - INFO - Returning database object...
+2025-03-12 23:41:58,596 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:41:59,575 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:59] "GET /_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2025-03-12 23:41:59,772 - ERROR - Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\dash.py", line 1376, in dispatch
+    ctx.run(
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_callback.py", line 525, in add_context
+    flat_output_values = flatten_grouping(output_value, output)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 35, in flatten_grouping
+    validate_grouping(grouping, schema)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 210, in validate_grouping
+    SchemaTypeValidationError.check(grouping, full_schema, path, (tuple, list))
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 162, in check
+    raise SchemaTypeValidationError(value, full_schema, path, expected_type)
+dash._grouping.SchemaTypeValidationError: Schema: [<Output `timeseries-chart-trades.figure`>, <Output `timeseries-chart-tta.figure`>]
+                Path: ()
+                Expected type: (<class 'tuple'>, <class 'list'>)
+                Received value of type <class 'plotly.graph_objs._figure.Figure'>:
+                    Figure({
+    'data': [{'hovertemplate': '<extra></extra>',
+              'legendgroup': '',
+              'line': {'color': '#636efa', 'dash': 'solid'},
+              'marker': {'symbol': 'circle'},
+              'mode': 'lines',
+              'name': '',
+              'orientation': 'v',
+              'showlegend': False,
+              'type': 'scatter',
+              'xaxis': 'x',
+              'yaxis': 'y'}],
+    'layout': {'legend': {'tracegroupgap': 0},
+               'template': '...',
+               'title': {'text': 'Select a security to view the chart'},
+               'xaxis': {'anchor': 'y', 'domain': [0.0, 1.0]},
+               'yaxis': {'anchor': 'x', 'domain': [0.0, 1.0]}}
+})
+2025-03-12 23:41:59,774 - INFO - 127.0.0.1 - - [12/Mar/2025 23:41:59] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-03-12 23:42:00,934 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:00,936 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:00,969 - INFO - Returning database object...
+2025-03-12 23:42:00,988 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:42:01,092 - INFO - Returning database object...
+2025-03-12 23:42:01,298 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:42:06,197 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:06,200 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:06,233 - INFO - Returning database object...
+2025-03-12 23:42:06,239 - INFO - Returning database object...
+2025-03-12 23:42:06,252 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:42:06,385 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:42:10,533 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:10,536 - INFO - Attempting to connect to the database...
+2025-03-12 23:42:10,569 - INFO - Returning database object...
+2025-03-12 23:42:10,582 - INFO - Returning database object...
+2025-03-12 23:42:10,588 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:42:10,757 - INFO - 127.0.0.1 - - [12/Mar/2025 23:42:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:44:50,638 - INFO - Attempting to connect to the database...
+2025-03-12 23:44:50,644 - INFO - Attempting to connect to the database...
+2025-03-12 23:44:55,368 - INFO - Attempting to connect to the database...
+2025-03-12 23:44:55,373 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:05,825 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:05,825 - INFO - Retrying... Elapsed time: 15.19 seconds
+2025-03-12 23:45:05,825 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:05,825 - INFO - Retrying... Elapsed time: 15.18 seconds
+2025-03-12 23:45:10,484 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:10,484 - INFO - Retrying... Elapsed time: 15.12 seconds
+2025-03-12 23:45:10,484 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:10,484 - INFO - Retrying... Elapsed time: 15.11 seconds
+2025-03-12 23:45:15,833 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:15,833 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:20,490 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:20,492 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:30,969 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:30,969 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:30,969 - INFO - Retrying... Elapsed time: 40.33 seconds
+2025-03-12 23:45:30,970 - INFO - Retrying... Elapsed time: 40.33 seconds
+2025-03-12 23:45:35,597 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:35,597 - INFO - Retrying... Elapsed time: 40.23 seconds
+2025-03-12 23:45:35,597 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:45:35,597 - INFO - Retrying... Elapsed time: 40.22 seconds
+2025-03-12 23:45:40,971 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:40,971 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:41,148 - INFO - Returning database object...
+2025-03-12 23:45:41,149 - INFO - Returning database object...
+2025-03-12 23:45:41,173 - INFO - 127.0.0.1 - - [12/Mar/2025 23:45:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:45:41,260 - INFO - 127.0.0.1 - - [12/Mar/2025 23:45:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:45:45,599 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:45,614 - INFO - Attempting to connect to the database...
+2025-03-12 23:45:45,655 - INFO - Returning database object...
+2025-03-12 23:45:45,670 - INFO - Returning database object...
+2025-03-12 23:45:45,683 - INFO - 127.0.0.1 - - [12/Mar/2025 23:45:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:45:45,767 - INFO - 127.0.0.1 - - [12/Mar/2025 23:45:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:47:16,544 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:19,761 - INFO - Returning database object...
+2025-03-12 23:47:19,822 - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-03-12 23:47:19,877 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2025-03-12 23:47:19,878 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 23:47:29,586 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:29] "GET / HTTP/1.1" 200 -
+2025-03-12 23:47:29,904 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:29] "GET /_dash-layout HTTP/1.1" 200 -
+2025-03-12 23:47:29,904 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:29] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-03-12 23:47:30,212 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:30] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-03-12 23:47:30,219 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:30] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-03-12 23:47:30,238 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:30] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-03-12 23:47:30,259 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:30,804 - ERROR - Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\dash.py", line 1376, in dispatch
+    ctx.run(
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_callback.py", line 525, in add_context
+    flat_output_values = flatten_grouping(output_value, output)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 35, in flatten_grouping
+    validate_grouping(grouping, schema)
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 210, in validate_grouping
+    SchemaTypeValidationError.check(grouping, full_schema, path, (tuple, list))
+  File "C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\dash\_grouping.py", line 162, in check
+    raise SchemaTypeValidationError(value, full_schema, path, expected_type)
+dash._grouping.SchemaTypeValidationError: Schema: [<Output `timeseries-chart-trades.figure`>, <Output `timeseries-chart-tta.figure`>]
+                Path: ()
+                Expected type: (<class 'tuple'>, <class 'list'>)
+                Received value of type <class 'plotly.graph_objs._figure.Figure'>:
+                    Figure({
+    'data': [{'hovertemplate': '<extra></extra>',
+              'legendgroup': '',
+              'line': {'color': '#636efa', 'dash': 'solid'},
+              'marker': {'symbol': 'circle'},
+              'mode': 'lines',
+              'name': '',
+              'orientation': 'v',
+              'showlegend': False,
+              'type': 'scatter',
+              'xaxis': 'x',
+              'yaxis': 'y'}],
+    'layout': {'legend': {'tracegroupgap': 0},
+               'template': '...',
+               'title': {'text': 'Select a security to view the chart'},
+               'xaxis': {'anchor': 'y', 'domain': [0.0, 1.0]},
+               'yaxis': {'anchor': 'x', 'domain': [0.0, 1.0]}}
+})
+2025-03-12 23:47:30,804 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:30] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-03-12 23:47:33,147 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:33,147 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:45,364 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:47:45,365 - INFO - Retrying... Elapsed time: 15.11 seconds
+2025-03-12 23:47:48,272 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:47:48,272 - INFO - Retrying... Elapsed time: 15.12 seconds
+2025-03-12 23:47:48,272 - ERROR - Database connection failed: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: The wait operation timed out.\r\n')
+2025-03-12 23:47:48,272 - INFO - Retrying... Elapsed time: 15.12 seconds
+2025-03-12 23:47:55,375 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:55,571 - INFO - Returning database object...
+2025-03-12 23:47:55,606 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:47:58,281 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:58,281 - INFO - Attempting to connect to the database...
+2025-03-12 23:47:58,335 - INFO - Returning database object...
+2025-03-12 23:47:58,493 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:47:58,496 - INFO - Returning database object...
+2025-03-12 23:47:58,516 - INFO - 127.0.0.1 - - [12/Mar/2025 23:47:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:48:03,096 - INFO - Attempting to connect to the database...
+2025-03-12 23:48:03,100 - INFO - Attempting to connect to the database...
+2025-03-12 23:48:03,161 - INFO - Returning database object...
+2025-03-12 23:48:03,163 - INFO - Returning database object...
+2025-03-12 23:48:03,184 - INFO - 127.0.0.1 - - [12/Mar/2025 23:48:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:48:03,331 - INFO - 127.0.0.1 - - [12/Mar/2025 23:48:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:48:05,392 - INFO - Attempting to connect to the database...
+2025-03-12 23:48:05,396 - INFO - Attempting to connect to the database...
+2025-03-12 23:48:05,461 - INFO - Returning database object...
+2025-03-12 23:48:05,467 - INFO - Returning database object...
+2025-03-12 23:48:05,494 - INFO - 127.0.0.1 - - [12/Mar/2025 23:48:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-03-12 23:48:05,684 - INFO - 127.0.0.1 - - [12/Mar/2025 23:48:05] "POST /_dash-update-component HTTP/1.1" 200 -
