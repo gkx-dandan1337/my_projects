@@ -1,4 +1,2 @@
-selenium
-pandas
-pypyodbc
+selenium webdriver-manager pandas pypyodbc
 
