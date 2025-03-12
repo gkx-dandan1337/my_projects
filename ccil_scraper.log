@@ -108,3 +108,11 @@
 2025-03-12 17:44:53,778 - INFO - returning database object...
 2025-03-12 17:44:54,840 - INFO - Inserted 15 new rows into SQL database.
 2025-03-12 17:44:54,883 - INFO - Database connection closed.
+2025-03-12 21:04:24,084 - INFO - ====== WebDriver manager ======
+2025-03-12 21:04:26,402 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 21:04:26,546 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 21:04:26,597 - INFO - Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\134.0.6998.88\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 21:04:45,043 - INFO - Attempting to connect to the database...
+2025-03-12 21:04:45,304 - INFO - Returning database object...
+2025-03-12 21:04:45,591 - INFO - Inserted 15 new rows into SQL database.
+2025-03-12 21:04:45,613 - INFO - Database connection closed.

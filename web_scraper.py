@@ -38,6 +38,7 @@ def connect_to_db():
 #scraping ccil market data
 #selenium was used using a headless browser so that it can run on the virtual machine. beautiful soup cannot be used as the data from the table is loaded dynamically based on javascript.
 def scrape_ccil():
+    logging.info(f'Scraping data...')
     options = Options()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")

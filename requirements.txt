@@ -2,4 +2,8 @@ selenium
 webdriver-manager 
 pandas 
 pypyodbc
+dash
+plotly
+dash-bootstrap-components
+
 
