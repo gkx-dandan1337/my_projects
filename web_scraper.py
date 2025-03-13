@@ -46,10 +46,10 @@ def scrape_ccil():
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
-
     url = "https://www.ccilindia.com/web/ccil/rbi-nds-om1"
+    driver.set_page_load_timeout(300)  # Set timeout to 5 minutes
     driver.get(url)
-
+    
     time.sleep(5)
 
     rows = driver.find_elements("xpath", "//table/tbody/tr") #extract all the relevant tables.
