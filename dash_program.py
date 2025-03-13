@@ -146,6 +146,6 @@ def update_chart(selected_security):
 #     return fig
 
 def main():
-    app.run_server(debug=False)
+    app.run_server(host='0.0.0.0', port=8050, debug=True)
 
 main()
